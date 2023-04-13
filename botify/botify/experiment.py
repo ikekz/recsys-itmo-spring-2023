@@ -6,18 +6,12 @@ import mmh3
 class Treatment(Enum):
     C = 0
     T1 = 1
-    T2 = 2
-    T3 = 3
-    T4 = 4
-    T5 = 5
-    T6 = 6
 
 
 class Split(Enum):
     HALF_HALF = 2
     FOUR_WAY = 4
     FIVE_WAY = 5
-    SEVEN_WAY = 7
 
 
 class Experiment:
@@ -56,15 +50,15 @@ class Experiments:
     A static container for all the existing experiments.
     """
 
-    # TODO Seminar 6 step 5: Configure RECOMMENDERS A/B experiment
+    # TODO Seminar 5 step 2: Configure CONTEXTUAL A/B experiment
 
-    AA = Experiment("AA", Split.HALF_HALF)
-    STICKY_ARTIST = Experiment("STICKY_ARTIST", Split.HALF_HALF)
-    TOP_POP = Experiment("TOP_POP", Split.FOUR_WAY)
-    USER_BASED = Experiment("USER_BASED", Split.HALF_HALF)
-    PERSONALIZED = Experiment("PERSONALIZED", Split.HALF_HALF)
-    CONTEXTUAL = Experiment("CONTEXTUAL", Split.HALF_HALF)
-    RECOMMENDERS = Experiment("RECOMMENDERS", Split.SEVEN_WAY)
+    # AA = Experiment("AA", Split.HALF_HALF)
+    # STICKY_ARTIST = Experiment("STICKY_ARTIST", Split.HALF_HALF)
+    # TOP_POP = Experiment("TOP_POP", Split.FOUR_WAY)
+    # USER_BASED = Experiment("USER_BASED", Split.HALF_HALF)
+    # PERSONALIZED = Experiment("PERSONALIZED", Split.HALF_HALF)
+    # CONTEXTUAL = Experiment("CONTEXTUAL", Split.HALF_HALF)
+    HOMEWORK = Experiment("HOMEWORK", Split.HALF_HALF)
 
     def __init__(self):
-        self.experiments = [Experiments.RECOMMENDERS]
+        self.experiments = [Experiments.HOMEWORK]
